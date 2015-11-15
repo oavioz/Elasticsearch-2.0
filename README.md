@@ -5,8 +5,9 @@
  
  To complete this tutorial, you will require root access to an Ubuntu 14.04 VPS.
  
- The amount of CPU, RAM, and storage that your Logstash Server will require depends on the volume of logs that you intend to gather. 
- For this tutorial, we will be using a VPS with the following specs for our Logstash Server:
+ The amount of CPU, RAM, and storage that Elasticsearch Server will require depends on the volume of logs that you intend to gather.
+ 
+ For this installation, we will be using a VPS with the following specs for our Elasticsearch Server:
 
 	OS: Ubuntu 14.04
 	
