@@ -36,7 +36,7 @@
    
   # Install Elasticsearch 2.0
    
-   # If git is not installed please run: apt-get install -Y git
+   # If git is not installed please run: apt-get -y install git
    
 		1. git clone https://github.com/oavioz/Elasticsearch-2.0.git
 		
