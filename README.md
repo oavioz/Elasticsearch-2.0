@@ -21,8 +21,10 @@
 	   It should, however, work fine with OpenJDK, if you decide to go that route.
    
    # Add the Oracle Java PPA to apt:
+   #Note: If software-properties-common is not installed please run: apt-get -y install software-properties-common
+																	
    
-   sudo add-apt-repository -y ppa:webupd8team/java
+		sudo add-apt-repository -y ppa:webupd8team/java
    
    Update your apt package database:
    
@@ -30,10 +32,10 @@
    
    Install the latest stable version of Oracle Java 8 with this command (and accept the license agreement that pops up):
    
+		echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
+		echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
 		sudo apt-get -y install oracle-java8-installer
-   
-		sudo apt-get -y install oracle-java8-installer
-   
+   		
   # Install Elasticsearch 2.0
    
    # If git is not installed please run: apt-get -y install git
@@ -85,15 +87,15 @@
 		
 	Now start Elasticsearch:
 	
-	sudo service elasticsearch restart
+		sudo service elasticsearch restart
 	
 	Then run the following command to start Elasticsearch on boot up:
 	
-	sudo update-rc.d elasticsearch defaults 95 10
+		sudo update-rc.d elasticsearch defaults 95 10
 	
 	# To check if Elasticsearch is up and running please run the command:
 	
-	 curl 'http://172.31.12.27:9200'
+	 curl 'http://<Public IP>:9200'
 	 
 	 # you shoud get the result:
 	 
