@@ -37,10 +37,15 @@
   # Install Elasticsearch 2.0
    
    # If git is not installed please run: apt-get install -Y git
+   
 		1. git clone https://github.com/oavioz/Elasticsearch-2.0.git
+		
 		2. Change directory to folder conten:
+		
 			2.1 cd Elasticsearch-2.0
+			
 		3. Running shell scrip
+		
 			3.1 ./elasticsearch2.0-install.sh
 		
 	Elasticsearch can be installed with a package manager by adding Elastic's package source list.
