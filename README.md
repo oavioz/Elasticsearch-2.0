@@ -22,7 +22,9 @@
    
    # Add the Oracle Java PPA to apt:
    
-   #Note: If software-properties-common is not installed please run: apt-get -y install software-properties-common
+   #Note: If software-properties-common is not installed please run: 
+   
+		apt-get -y install software-properties-common
 																	
    
 		sudo add-apt-repository -y ppa:webupd8team/java
