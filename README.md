@@ -51,50 +51,11 @@
 			2.1 cd Elasticsearch-2.0
 					
 		3. Modify File Permissions with chmod
-		   3.1 chmod 750 elasticsearch2.0-install.sh
+		   3.1 chmod 750 elasticsearch2.0-install.sh Cookbook.sh
 			
 		4. Running shell script
-		   4.1 ./elasticsearch2.0-install.sh
+		   4.1 ./Cookbook.sh
 		
-	Elasticsearch can be installed with a package manager by adding Elastic's package source list.
-    
-	Run the following command to import the Elasticsearch public GPG key into apt:
-   
-		wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
-   
-	If your prompt is just hanging there, it is probably waiting for your user's password (to authorize the sudo command). If this is the case, enter your password.
-   
-	Create the Elasticsearch source list:
-   
-		echo "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
-   
-	Update your apt package database:
-   
-		sudo apt-get update
-   
-   Install Elasticsearch with this command:
-   
-		sudo apt-get -y install elasticsearch
-   
-   Elasticsearch is now installed. Let's edit the configuration:
-   
-		sudo vi /etc/elasticsearch/elasticsearch.yml
-   
-     You will want to restrict outside access to your Elasticsearch instance (port 9200), so outsiders can't read your data or shutdown your Elasticsearch cluster through the HTTP API. 
-	 Find the line that specifies network.host, uncomment it, and replace its value with "localhost" so it looks like this:
-	 
-			elasticsearch.yml excerpt (updated)
-			
-			network.host: localhost
-		Save and exit elasticsearch.yml.
-		
-	Now start Elasticsearch:
-	
-		sudo service elasticsearch restart
-	
-	Then run the following command to start Elasticsearch on boot up:
-	
-		sudo update-rc.d elasticsearch defaults 95 10
 	
 	# To check if Elasticsearch is up and running please run the command:
 	
