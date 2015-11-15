@@ -8,15 +8,17 @@
  The amount of CPU, RAM, and storage that your Logstash Server will require depends on the volume of logs that you intend to gather. 
  For this tutorial, we will be using a VPS with the following specs for our Logstash Server:
 
-OS: Ubuntu 14.04
-RAM: 4GB
-CPU: 2
+	OS: Ubuntu 14.04
+	
+	RAM: 4GB
+	
+	CPU: 2
 
-   Install Java 8
+   #Install Java 8
    
-   Elasticsearch Java, so we will install that now. 
-   We will install a recent version of Oracle Java 8 because that is what Elasticsearch recommends. 
-   It should, however, work fine with OpenJDK, if you decide to go that route.
+	   Elasticsearch Java, so we will install that now. 
+	   We will install a recent version of Oracle Java 8 because that is what Elasticsearch recommends. 
+	   It should, however, work fine with OpenJDK, if you decide to go that route.
    
    # Add the Oracle Java PPA to apt:
    
@@ -24,39 +26,39 @@ CPU: 2
    
    Update your apt package database:
    
-   sudo apt-get update
+		sudo apt-get update
    
    Install the latest stable version of Oracle Java 8 with this command (and accept the license agreement that pops up):
    
-   sudo apt-get -y install oracle-java8-installer
+		sudo apt-get -y install oracle-java8-installer
    
-   sudo apt-get -y install oracle-java8-installer
+		sudo apt-get -y install oracle-java8-installer
    
-   Install Elasticsearch 2.0
+  # Install Elasticsearch 2.0
    
-   Elasticsearch can be installed with a package manager by adding Elastic's package source list.
+	Elasticsearch can be installed with a package manager by adding Elastic's package source list.
    
-   Run the following command to import the Elasticsearch public GPG key into apt:
+	Run the following command to import the Elasticsearch public GPG key into apt:
    
-   wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+		wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
    
-   If your prompt is just hanging there, it is probably waiting for your user's password (to authorize the sudo command). If this is the case, enter your password.
+	If your prompt is just hanging there, it is probably waiting for your user's password (to authorize the sudo command). If this is the case, enter your password.
    
-   Create the Elasticsearch source list:
+	Create the Elasticsearch source list:
    
-   echo "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
+		echo "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
    
-   Update your apt package database:
+	Update your apt package database:
    
-   sudo apt-get update
+		sudo apt-get update
    
    Install Elasticsearch with this command:
    
-   sudo apt-get -y install elasticsearch
+		sudo apt-get -y install elasticsearch
    
    Elasticsearch is now installed. Let's edit the configuration:
    
-   sudo vi /etc/elasticsearch/elasticsearch.yml
+		sudo vi /etc/elasticsearch/elasticsearch.yml
    
      You will want to restrict outside access to your Elasticsearch instance (port 9200), so outsiders can't read your data or shutdown your Elasticsearch cluster through the HTTP API. 
 	 Find the line that specifies network.host, uncomment it, and replace its value with "localhost" so it looks like this:
