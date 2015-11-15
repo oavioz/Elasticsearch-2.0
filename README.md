@@ -47,8 +47,8 @@
 		1. git clone https://github.com/oavioz/Elasticsearch-2.0.git
 		
 		2. Change directory to folder conten:
-		
-			2.1 cd Elasticsearch-2.0
+					2.1 cd Elasticsearch-2.0
+					
 		3. Modify File Permissions with chmod
 		
 			3.1 chmod 750 elasticsearch2.0-install.sh
