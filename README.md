@@ -26,7 +26,8 @@
    
 		apt-get -y install software-properties-common
 																	
-   
+		Than add java8 repository:
+		
 		sudo add-apt-repository -y ppa:webupd8team/java
    
    Update your apt package database:
