@@ -21,6 +21,7 @@
 	   It should, however, work fine with OpenJDK, if you decide to go that route.
    
    # Add the Oracle Java PPA to apt:
+   
    #Note: If software-properties-common is not installed please run: apt-get -y install software-properties-common
 																	
    
