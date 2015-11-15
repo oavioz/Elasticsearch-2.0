@@ -43,10 +43,13 @@
 		2. Change directory to folder conten:
 		
 			2.1 cd Elasticsearch-2.0
-			
-		3. Running shell script
+		3. Modify File Permissions with chmod
 		
-			3.1 ./elasticsearch2.0-install.sh
+			3.1 chmod 750 elasticsearch2.0-install.sh
+			
+		4. Running shell script
+		
+			4.1 ./elasticsearch2.0-install.sh
 		
 	Elasticsearch can be installed with a package manager by adding Elastic's package source list.
     
