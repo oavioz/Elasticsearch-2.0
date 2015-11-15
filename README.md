@@ -44,7 +44,7 @@
 		
 			2.1 cd Elasticsearch-2.0
 			
-		3. Running shell scrip
+		3. Running shell script
 		
 			3.1 ./elasticsearch2.0-install.sh
 		
